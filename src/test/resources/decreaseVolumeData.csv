@@ -1,0 +1,7 @@
+decrease volume middle data,5,4
+decrease volume min data,0,0
+decrease volume less min,-1,0
+decrease volume more max,11,0
+decrease volume max data,10,9
+decrease volume before last,9,8
+decrease volume second,1,0

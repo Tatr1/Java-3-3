@@ -1,0 +1,7 @@
+decrease wave niddle data,5,4
+decrease wave min data,0,9
+decrease wave less min,-1,9
+decrease wave more max,10,9
+decrease wave max data,9,8
+decrease volume before last,8,7
+decrease volume second,1,0
