@@ -8,6 +8,17 @@ public class Radio {
     private int currentVolume;
     private int currentWave;
 
+    public Radio(){
+}
+
+    public Radio(int maxVolume, int minVolume, int maxWave, int minWave, int currentVolume, int currentWave) {
+        this.maxVolume = maxVolume;
+        this.minVolume = minVolume;
+        this.maxWave = maxWave;
+        this.minWave = minWave;
+        this.currentVolume = currentVolume;
+        this.currentWave = currentWave;
+    }
 
     public int getCurrentVolume() {
         return currentVolume;
