@@ -1,0 +1,7 @@
+increase wave niddle data,50,51
+increase wave min data,0,1
+increase wave less min,-1,1
+increase wave more max,101,1
+increase wave max data,99,0
+increase wave before last,98,99
+increase wave second,1,2
