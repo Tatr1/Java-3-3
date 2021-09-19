@@ -15,9 +15,21 @@ class RadioTest {
         assertEquals(0, radio.getCurrentWave());
     }
 
-    @Test
+//    @Test
+//    public void autoRadio(){
+//        Radio radio = new Radio();
+//    }
+
+        @Test
     public void shouldRadio(){
         Radio radio = new Radio(100,0,99,0,0,0);
+        }
+
+    @Test
+    public void clientRadio() {
+        int clientWave = 49;
+        int maxWave = clientWave - 1;
+        Radio radio = new Radio(clientWave, 100, 0, maxWave, 0, 0, 0);
     }
 
     @ParameterizedTest
