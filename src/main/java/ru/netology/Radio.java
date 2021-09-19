@@ -1,7 +1,6 @@
 package ru.netology;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 // @Data
@@ -19,7 +18,7 @@ public class Radio {
 //    public Radio(){
 //}
 
-    public Radio (int clientWave, int maxVolume, int minVolume, int maxWave, int minWave, int currentVolume, int currentWave){
+    public Radio(int clientWave, int maxVolume, int minVolume, int maxWave, int minWave, int currentVolume, int currentWave) {
         this.maxVolume = maxVolume;
         this.minVolume = minVolume;
         this.maxWave = clientWave - 1;
