@@ -1,40 +1,60 @@
 package ru.netology;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
-// @Data
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 
 public class Radio {
-    private int maxVolume = 10;
+    private int maxVolume = 100;
     private int minVolume = 0;
     private int maxWave = 9;
     private int minWave = 0;
     private int currentVolume;
     private int currentWave;
+    private int clientWave = 10;
 
-//    public Radio(){
-//}
-
-    public Radio(int clientWave, int maxVolume, int minVolume, int maxWave, int minWave, int currentVolume, int currentWave) {
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
-        this.maxWave = clientWave - 1;
-        this.minWave = minWave;
-        this.currentVolume = currentVolume;
-        this.currentWave = currentWave;
-    }
-
-//    public Radio(int maxVolume, int minVolume, int maxWave, int minWave, int currentVolume, int currentWave) {
+//    public Radio() {
+//    }
+//
+//    public Radio(int maxVolume, int minVolume, int maxWave, int minWave, int currentVolume, int currentWave, int clientWave) {
 //        this.maxVolume = maxVolume;
 //        this.minVolume = minVolume;
 //        this.maxWave = maxWave;
 //        this.minWave = minWave;
 //        this.currentVolume = currentVolume;
 //        this.currentWave = currentWave;
+//        this.clientWave = clientWave;
 //    }
+
+    public Radio(int clientWave) {
+        if (clientWave < 0) {
+            clientWave = 10;
+        }
+        this.maxWave = clientWave - 1;
+        setClientWave(clientWave);
+        setMaxWave(this.maxWave);
+    }
+
+    public int getMaxWave() {
+        return maxWave;
+    }
+
+    public void setMaxWave(int maxWave) {
+        maxWave = clientWave - 1;
+        this.maxWave = maxWave;
+    }
+
+    public int getClientWave() {
+        return clientWave;
+    }
+
+    public void setClientWave(int clientWave) {
+        this.clientWave = clientWave;
+    }
 
     public int getCurrentVolume() {
         return currentVolume;
@@ -97,5 +117,3 @@ public class Radio {
         }
     }
 }
-
-
